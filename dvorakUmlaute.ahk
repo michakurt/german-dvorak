@@ -1,4 +1,4 @@
-; Keymappings fÃ¼r amerikanisches Dvorak-Layout mit deutschen Umlauten: AltGr-u = Ã¼ AltGr-Shift-u = Ãœ, usw. AltGr-s = ÃŸ, AltGr-e = â‚¬
+; Keymappings für amerikanisches Dvorak-Layout mit deutschen Umlauten: AltGr-u = ü AltGr-Shift-u = Ü, usw. AltGr-s = ß, AltGr-e = EUR
 
 #UseHook
 vkE2sc056::Shift ;  Die kleine Taste links neben Shift auf Shift mappen.
@@ -18,9 +18,9 @@ IfWinActive, emacs
     return
 } else {
   if(GetKeyState("Shift"))
-        SendRaw Ã„
+        SendRaw Ä
     else
-        SendRaw Ã¤        
+        SendRaw ä        
     return
 }
 
@@ -34,9 +34,9 @@ IfWinActive, emacs
     return
 } else {
   if(GetKeyState("Shift"))
-        SendRaw Ãœ
+        SendRaw Ü
     else
-        SendRaw Ã¼        
+        SendRaw ü        
     return
 }
 
@@ -50,9 +50,9 @@ IfWinActive, emacs
     return
 } else {
   if(GetKeyState("Shift"))
-        SendRaw Ã–
+        SendRaw Ö
     else
-        SendRaw Ã¶       
+        SendRaw ö       
     return
 }
 
@@ -63,7 +63,7 @@ IfWinActive, emacs
    Send ^q!_
    return
 } else {
-   SendRaw ÃŸ
+   SendRaw ß
    return
 }
 
@@ -73,9 +73,9 @@ IfWinActive, emacs
    Send ^q20254{Enter}
    return
 } else {
-   SendRaw â‚¬
+   SendRaw €
    return
 }
 
-;LWin wird vom DWM benutzt. Darum wollen wir fÃ¼r Windows als Windows-Key nur die rechte Windowstaste benutzen.
+;LWin wird vom DWM benutzt. Darum wollen wir für Windows als Windows-Key nur die rechte Windowstaste benutzen.
 ~LWin Up:: return
