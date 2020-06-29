@@ -1,3 +1,13 @@
+#Persistent
+SetTimer, MoveMouse
+
+MoveMouse:
+If ( A_TimeIdle > 133000 ) {
+  MouseMove, 1 , 1,, R
+  MouseMove, -1,-1,, R
+}
+Return
+
 ; Keymappings für amerikanisches Dvorak-Layout mit deutschen Umlauten: AltGr-u = ü AltGr-Shift-u = Ü, usw. AltGr-s = ß, AltGr-e = EUR
 
 #UseHook
@@ -5,8 +15,8 @@ vkE2sc056::Shift ;  Die kleine Taste links neben Shift auf Shift mappen.
 
 Capslock::Ctrl
 
-vk14sc03A::Ctrl ; Die Tab-Taste
-vkA2sc01D::Capslock ; Die linke Strg-Taste unten
+;vk14sc03A::Ctrl ; Die Tab-Taste
+;\vkA2sc01D::Capslock ; Die linke Strg-Taste unten
 
 RAlt & a::
 IfWinActive, emacs
@@ -79,3 +89,4 @@ IfWinActive, emacs
 
 ;LWin wird vom DWM benutzt. Darum wollen wir für Windows als Windows-Key nur die rechte Windowstaste benutzen.
 ~LWin Up:: return
+
