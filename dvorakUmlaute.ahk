@@ -1,5 +1,5 @@
 #Persistent
-SetTimer, MoveMouse
+SetTimer, MoveMouse, 10000, 7
 
 MoveMouse:
 If ( A_TimeIdle > 133000 ) {
@@ -7,8 +7,6 @@ If ( A_TimeIdle > 133000 ) {
   MouseMove, -1,-1,, R
 }
 Return
-
-; Keymappings für amerikanisches Dvorak-Layout mit deutschen Umlauten: AltGr-u = ü AltGr-Shift-u = Ü, usw. AltGr-s = ß, AltGr-e = EUR
 
 #UseHook
 vkE2sc056::Shift ;  Die kleine Taste links neben Shift auf Shift mappen.
@@ -18,6 +16,7 @@ Capslock::Ctrl
 ;vk14sc03A::Ctrl ; Die Tab-Taste
 ;\vkA2sc01D::Capslock ; Die linke Strg-Taste unten
 
+; Keymappings fÃ¼r amerikanisches Dvorak-Layout mit deutschen Umlauten: AltGr-u = Ã¼ AltGr-Shift-u = Ãœ, usw. AltGr-s = ÃŸ, AltGr-e = EUR
 RAlt & a::
 IfWinActive, emacs
 {
@@ -28,9 +27,9 @@ IfWinActive, emacs
     return
 } else {
   if(GetKeyState("Shift"))
-        SendRaw Ä
+        SendRaw Ã„
     else
-        SendRaw ä        
+        SendRaw Ã¤        
     return
 }
 
@@ -44,9 +43,9 @@ IfWinActive, emacs
     return
 } else {
   if(GetKeyState("Shift"))
-        SendRaw Ü
+        SendRaw Ãœ
     else
-        SendRaw ü        
+        SendRaw Ã¼        
     return
 }
 
@@ -60,9 +59,9 @@ IfWinActive, emacs
     return
 } else {
   if(GetKeyState("Shift"))
-        SendRaw Ö
+        SendRaw Ã–
     else
-        SendRaw ö       
+        SendRaw Ã¶       
     return
 }
 
@@ -73,7 +72,7 @@ IfWinActive, emacs
    Send ^q!_
    return
 } else {
-   SendRaw ß
+   SendRaw ÃŸ
    return
 }
 
@@ -83,10 +82,10 @@ IfWinActive, emacs
    Send ^q20254{Enter}
    return
 } else {
-   SendRaw €
+   SendRaw â‚¬
    return
 }
 
-;LWin wird vom DWM benutzt. Darum wollen wir für Windows als Windows-Key nur die rechte Windowstaste benutzen.
+;LWin wird vom DWM benutzt. Darum wollen wir fÃ¼r Windows als Windows-Key nur die rechte Windowstaste benutzen.
 ~LWin Up:: return
 
