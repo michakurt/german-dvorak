@@ -19,6 +19,15 @@ evdev:input:b0003v0603p*
   KEYBOARD_KEY_700e0=capslock     # leftctrl=capslock
   KEYBOARD_KEY_70039=leftctrl     # capslock=leftctrl
 ```
+Möchte man bei einem Keyboard mit kleiner linker Shift-Taste die die Taste neben der Shift-Taste, die man beim Dvorak-Layout nicht braucht, zu Shift machen (um das Handgelenk nicht so drehen zu müssen), kann man das mit folgendem Mapping erreichen:
+```
+evdev:atkbd:dmi:* #eingebautes Laptop-Keyboard
+  KEYBOARD_KEY_56=leftshift     # Die Taste rechts neben der kleinen Shift-Taste
+
+evdev:input:b0003v0603p*
+  KEYBOARD_KEY_70064=leftshift     # Die Taste rechts neben der kleinen Shift-Taste
+
+```
 
 Dann mit den Kommandos
 ```
